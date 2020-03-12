@@ -1,0 +1,8 @@
+services:
+    # symfony validator
+    Czechphp\NationalIdentificationNumberBundle\Validator\Constraints\NationalIdentificationNumberValidator:
+        arguments: ['@Czechphp\NationalIdentificationNumberValidator\NationalIdentificationNumberValidator']
+        tags: ['validator.constraint_validator']
+
+    # validator
+    Czechphp\NationalIdentificationNumberValidator\NationalIdentificationNumberValidator:

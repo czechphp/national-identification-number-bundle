@@ -1,0 +1,35 @@
+{
+    "name": "czechphp/national-identification-number-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony integration for Czech national identification number validator library",
+    "keywords": ["national identification number", "rodné číslo", "validator", "Czech republic", "Czechia"],
+    "require": {
+        "php": "^7.2",
+        "czechphp/national-identification-number-validator": "^1.0",
+        "symfony/config": "^3.4|^4|^5",
+        "symfony/dependency-injection": "^3.4|^4|^5",
+        "symfony/http-kernel": "^3.4|^4|^5",
+        "symfony/validator": "^3.4|^4|^5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "dg/bypass-finals": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukas Mencl",
+            "email": "tetra.jinak@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Czechphp\\NationalIdentificationNumberBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Czechphp\\NationalIdentificationNumberBundle\\Tests\\": "Tests/"
+        }
+    }
+}
