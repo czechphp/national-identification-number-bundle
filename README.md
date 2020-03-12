@@ -1,4 +1,4 @@
-# Czech Bank Account Symfony integration
+# Czech [National identification number](https://en.wikipedia.org/wiki/National_identification_number) Symfony integration
 
 [![Build Status](https://travis-ci.com/czechphp/national-identification-number-bundle.svg?branch=master)](https://travis-ci.com/czechphp/national-identification-number-bundle)
 [![codecov](https://codecov.io/gh/czechphp/national-identification-number-bundle/branch/master/graph/badge.svg)](https://codecov.io/gh/czechphp/czechphp/national-identification-number-bundle)
