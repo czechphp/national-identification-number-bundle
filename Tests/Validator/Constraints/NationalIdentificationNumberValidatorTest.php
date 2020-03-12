@@ -124,4 +124,64 @@ class NationalIdentificationNumberValidatorTest extends ConstraintValidatorTestC
         $builder->setCode(NationalIdentificationNumber::FORMAT_ERROR);
         $builder->assertRaised();
     }
+
+    public function testMonth()
+    {
+        $this->baseValidator->expects($this->once())->method('validate')->willReturn(BaseValidator::ERROR_MONTH);
+
+        $value = 'invalid_month';
+        $constraint = new NationalIdentificationNumber();
+
+        $this->validator->validate($value, $constraint);
+
+        $builder = $this->buildViolation($constraint->message);
+        $builder->setParameter('{{ value }}', $value);
+        $builder->setCode(NationalIdentificationNumber::MONTH_ERROR);
+        $builder->assertRaised();
+    }
+
+    public function testDay()
+    {
+        $this->baseValidator->expects($this->once())->method('validate')->willReturn(BaseValidator::ERROR_DAY);
+
+        $value = 'invalid_day';
+        $constraint = new NationalIdentificationNumber();
+
+        $this->validator->validate($value, $constraint);
+
+        $builder = $this->buildViolation($constraint->message);
+        $builder->setParameter('{{ value }}', $value);
+        $builder->setCode(NationalIdentificationNumber::DAY_ERROR);
+        $builder->assertRaised();
+    }
+
+    public function testSequence()
+    {
+        $this->baseValidator->expects($this->once())->method('validate')->willReturn(BaseValidator::ERROR_SEQUENCE);
+
+        $value = 'invalid_sequence';
+        $constraint = new NationalIdentificationNumber();
+
+        $this->validator->validate($value, $constraint);
+
+        $builder = $this->buildViolation($constraint->message);
+        $builder->setParameter('{{ value }}', $value);
+        $builder->setCode(NationalIdentificationNumber::SEQUENCE_ERROR);
+        $builder->assertRaised();
+    }
+
+    public function testModulo()
+    {
+        $this->baseValidator->expects($this->once())->method('validate')->willReturn(BaseValidator::ERROR_MODULO);
+
+        $value = 'invalid_modulo';
+        $constraint = new NationalIdentificationNumber();
+
+        $this->validator->validate($value, $constraint);
+
+        $builder = $this->buildViolation($constraint->message);
+        $builder->setParameter('{{ value }}', $value);
+        $builder->setCode(NationalIdentificationNumber::MODULO_ERROR);
+        $builder->assertRaised();
+    }
 }
