@@ -25,7 +25,10 @@
     "autoload": {
         "psr-4": {
             "Czechphp\\NationalIdentificationNumberBundle\\": ""
-        }
+        },
+        "exclude-from-classmap": [
+            "Tests"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
